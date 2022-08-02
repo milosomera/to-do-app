@@ -4,74 +4,21 @@
   box-sizing: border-box;
 }
 
-body {
-  background-color: #323232;
+div#body-container {
+  max-width: 540px;
 }
 
-.app-body {
-  text-align: center;
-  width: 200px;
-  height: auto;
-  margin: 200px auto 0 auto;
-  background-color: bisque; 
+div#body-container,
+div.fullScreen {
+  width: 100%;
+  height: 100vh;
 }
 
-table {
-  width: 200px;
+div.fullScreen form.login {
+  min-width: 326px;
+  max-width: 552px;
 }
 
-th, .task-form div {
-  border-bottom: 2px ridge olive;
-  background-color: palegreen;
-  padding: 2px;
-}
-
-td {
-  text-align: left;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
-.delete-btn, .done-btn {
-  float: right;
-  padding: 4px;
-  border: 2px ridge olive;
-}
-
-.delete-btn {
-  border-radius: 100%;
-  font-weight: 700;
-  margin-left: 5px;
-}
-
-.done-btn {
-  border-radius: 5px;
-}
-
-.task-form {
-  width: 200px;
-  margin: 0 auto;
-}
-
-.task-form div {
-  font-weight: 700;
-}
-
-.task-form button {
-  border: 2px ridge olive;
-  border-radius: 5px;
-  padding: 4px;
-}
-
-.task-form span {
-  color: red;
-}
-
-.no-pending, .no-done {
-  font-weight: 700;
-  background-color: olive;
-  width: 200px;
-  margin: 2px auto;
-  padding: 2px;
-  border-bottom: 2px ridge palegreen;
+form.login {
+  box-shadow: 0 0 30px 10px #343434;
 }
