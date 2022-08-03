@@ -4,8 +4,7 @@ import { Button } from "react-bootstrap";
 import { BsFillTrashFill, BsFillCheckCircleFill } from "react-icons/bs";
 
 const TaskRow = (props) => {
-  const { deleteTask } = useContext(MyContext);
-  const { doneTask } = useContext(MyContext);
+  const { deleteTask, doneTask } = useContext(MyContext);
 
   let tasks = props.tasks.map((task) => {
     if (task.status === "pending") {

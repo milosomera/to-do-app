@@ -65,7 +65,7 @@ const MyProvider = (props) => {
       return tasksCopy;
     });
     await axios.delete(
-      "http://localhost:8080/tasks/delete/" + e.currentTarget.id
+      `http://localhost:8080/tasks/delete/${e.currentTarget.id}/${user._id}`
     );
     setTasks([...tasksCopy]);
   };
