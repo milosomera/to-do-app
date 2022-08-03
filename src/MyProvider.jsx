@@ -13,7 +13,7 @@ const MyProvider = (props) => {
 
   const logUser = async (email, password) => {
     const { data: user } = await axios.post(
-      "http://to-do-app-server.herokuapp.com/users/login",
+      "https://to-do-app-server.herokuapp.com/users/login",
       {
         email,
         password,
@@ -35,7 +35,7 @@ const MyProvider = (props) => {
 
   const addTask = async (task) => {
     const newTask = await axios.post(
-      "http://to-do-app-server.herokuapp.com/tasks/add",
+      "https://to-do-app-server.herokuapp.com/tasks/add",
       {
         name: task,
         user_id: user._id,
@@ -53,7 +53,7 @@ const MyProvider = (props) => {
       return tasksCopy;
     });
     await axios.patch(
-      "http://to-do-app-server.herokuapp.com/tasks/done/" + e.currentTarget.id,
+      "https://to-do-app-server.herokuapp.com/tasks/done/" + e.currentTarget.id,
       {}
     );
     setTasks([...tasksCopy]);
@@ -68,7 +68,7 @@ const MyProvider = (props) => {
       return tasksCopy;
     });
     await axios.delete(
-      `http://to-do-app-server.herokuapp.com/tasks/delete/${e.currentTarget.id}/${user._id}`
+      `https://to-do-app-server.herokuapp.com/tasks/delete/${e.currentTarget.id}/${user._id}`
     );
     setTasks([...tasksCopy]);
   };
@@ -90,7 +90,7 @@ const MyProvider = (props) => {
       const {
         data: { tasks: userTasks },
       } = await axios(
-        "http://to-do-app-server.herokuapp.com/users/" + user._id
+        "https://to-do-app-server.herokuapp.com/users/" + user._id
       );
       userTasks ? setTasks(userTasks) : setTasks([]);
     };

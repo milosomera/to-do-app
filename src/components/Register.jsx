@@ -16,7 +16,7 @@ const Register = ({ registrationModal, hideModal, logUser }) => {
       setMatchPasswordError("Passwords do not match");
     } else {
       const { data: user } = await axios.post(
-        "http://to-do-app-server.herokuapp.com/users/register",
+        "https://to-do-app-server.herokuapp.com/users/register",
         {
           name,
           email,
